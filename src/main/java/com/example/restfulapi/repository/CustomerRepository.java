@@ -1,0 +1,16 @@
+package com.example.java92022.week4.RestFulApi.repository;
+
+import com.example.java92022.week4.RestFulApi.domain.Customer;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface CustomerRepository {
+    Customer getCustomerById(String id);
+    List<Customer> getAllCustomers();
+    void CreateCustomer(String id, String name);
+    void DeleteCustomer(String id);
+    void AddOrderToCustomer(String id, String orderId);
+    List<String> getAllOrders(String id);
+}
