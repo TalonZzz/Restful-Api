@@ -1,9 +1,11 @@
 package com.example.restfulapi.repository;
 
 import com.example.restfulapi.domain.Customer;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
+import java.security.InvalidKeyException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -32,7 +34,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
     public void CreateCustomer(String id, String name) {
-        if(employeeMap.containsKey(id)) throw new IllegalArgumentException("This user id already exists.");
+        if(employeeMap.containsKey(id)) throw new DuplicateKeyException("This user id already exists.");
 
         Customer newCustomer = new Customer(name, id, new ArrayList<>(), new Date(), new Date(), true);
         employeeMap.put(newCustomer.getId(),newCustomer);
@@ -41,19 +43,20 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     @Override
     public void DeleteCustomer(String id) {
         if(!employeeMap.containsKey(id)) throw new IllegalArgumentException("Target user id does not exist.");
+
         employeeMap.remove(id);
 
     }
 
     @Override
     public void AddOrderToCustomer(String id, String orderId) {
-        if(employeeMap.containsKey(id)) throw new IllegalArgumentException("This user id already exists.");
+        if(employeeMap.containsKey(id)) throw new DuplicateKeyException("This user id already exists.");
         employeeMap.get(id).getOrders().add(orderId);
     }
 
     @Override
     public List<String> getAllOrders(String id) {
-        if(employeeMap.containsKey(id)) throw new IllegalArgumentException("This user id already exists.");
+        if(employeeMap.containsKey(id)) throw new DuplicateKeyException("This user id already exists.");
         return employeeMap.get(id).getOrders();
     }
 

@@ -28,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO getCustomerById(String id) {
         Customer customer = customerRepository.getCustomerById(id);
         if(customer == null) {
-            throw new RuntimeException(id + ": employee is null");
+            throw new IllegalArgumentException("Target user id does not exist.");
         }
         return new CustomerDTO(customer);
 
