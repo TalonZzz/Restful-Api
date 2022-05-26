@@ -1,8 +1,8 @@
-package com.example.java92022.week4.RestFulApi.service;
+package com.example.restfulapi.service;
 
-import com.example.java92022.week4.RestFulApi.domain.Customer;
-import com.example.java92022.week4.RestFulApi.domain.CustomerDTO;
-import com.example.java92022.week4.RestFulApi.repository.CustomerRepository;
+import com.example.restfulapi.domain.Customer;
+import com.example.restfulapi.domain.CustomerDTO;
+import com.example.restfulapi.repository.CustomerRepository;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,11 +1,10 @@
-package com.example.java92022.week4.RestFulApi.controller;
+package com.example.restfulapi.controller;
 
-import com.example.java92022.week4.RestFulApi.domain.CustomerDTO;
-import com.example.java92022.week4.RestFulApi.service.CustomerService;
+import com.example.restfulapi.domain.CustomerDTO;
+import com.example.restfulapi.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

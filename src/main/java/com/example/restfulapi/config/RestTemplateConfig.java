@@ -1,4 +1,4 @@
-package com.example.java92022.week4.RestFulApi.config;
+package com.example.restfulapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

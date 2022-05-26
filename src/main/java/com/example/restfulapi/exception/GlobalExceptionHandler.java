@@ -1,4 +1,4 @@
-package com.example.java92022.week4.RestFulApi.exception;
+package com.example.restfulapi.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

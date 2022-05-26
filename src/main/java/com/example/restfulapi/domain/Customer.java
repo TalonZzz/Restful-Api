@@ -1,4 +1,4 @@
-package com.example.java92022.week4.RestFulApi.domain;
+package com.example.restfulapi.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

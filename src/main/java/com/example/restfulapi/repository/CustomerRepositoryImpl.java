@@ -1,6 +1,6 @@
-package com.example.java92022.week4.RestFulApi.repository;
+package com.example.restfulapi.repository;
 
-import com.example.java92022.week4.RestFulApi.domain.Customer;
+import com.example.restfulapi.domain.Customer;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;

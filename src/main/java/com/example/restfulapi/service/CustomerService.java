@@ -1,6 +1,7 @@
-package com.example.java92022.week4.RestFulApi.service;
+package com.example.restfulapi.service;
 
-import com.example.java92022.week4.RestFulApi.domain.CustomerDTO;
+
+import com.example.restfulapi.domain.CustomerDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
